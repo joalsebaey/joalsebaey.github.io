@@ -226,12 +226,23 @@
             color: #38bdf8;
             font-weight: 600;
         }
-    </style>
+        /* Dashboard Slider Styles */
+        .flex-featured-card { grid-column: 1 / -1; }
+        .dashboard-slider { margin-top: 18px; border-radius: 8px; overflow: hidden; border: 1px solid #1e3a5f; background: #0a192f; }
+        .slider-track { display: flex; transition: transform 0.4s ease; }
+        .slide-img { min-width: 100%; width: 100%; height: 260px; object-fit: cover; object-position: top; display: block; }
+        .slider-controls { display: flex; align-items: center; justify-content: center; gap: 20px; padding: 10px; background: #0d1f36; }
+        .slider-btn { background: #1e3a5f; color: #38bdf8; border: 1px solid #38bdf8; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 1.1rem; transition: all 0.2s; display: flex; align-items: center; justify-content: center; }
+        .slider-btn:hover { background: #38bdf8; color: #0a192f; }
+        .slide-counter { color: #8892b0; font-family: monospace; font-size: 0.85rem; }
+        </style>
 </head>
-<body class="antialiased selection:bg-sky-500 selection:text-white">
-
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+    
+<body class="antialiased selection:bg-sky-500 selection:text-white">
+
+            
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex-shrink-0 font-bold text-xl tracking-wider text-white">YA.</div>
@@ -394,15 +405,27 @@
                     <span>Deep Learning</span> <span>CNN</span> <span>Python</span>
                 </div>
             </div>
-                        <div class="content-card project-card">
+                        <div class="content-card project-card flex-featured-card">
                 <div class="project-links">
                     <i class="fas fa-folder folder-icon"></i>
                     <a href="https://github.com/Welloz03/FLEX_AI_Life_Coach_App" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
                 </div>
-                <h3>FLEX AI Life Coach App</h3>
-                <p>A full-stack AI-powered life coaching web application built as a graduation project. Combines a React/TypeScript frontend with a FastAPI backend and LangChain + Google Generative AI to deliver personalized coaching, context-aware responses, and real-time chat with Markdown support, goal tracking, and adaptive learning.</p>
+                <h3>FLEX AI Life Coach App <span style="font-size:0.75rem;background:#1e3a5f;color:#38bdf8;padding:3px 8px;border-radius:4px;margin-left:8px;font-weight:500;">Graduation Project</span></h3>
+                <p>A full-stack AI-powered life coaching web application. Combines a React/TypeScript frontend with a FastAPI backend and LangChain + Google Generative AI to deliver personalized coaching, context-aware responses, real-time chat, goal tracking, and adaptive learning.</p>
+                <!-- Dashboard Image Slideshow -->
+                <div class="dashboard-slider" id="flexSlider">
+                    <div class="slider-track" id="flexTrack">
+                        <img src="images/flex-dashboard-1.png" alt="FLEX Dashboard - Progress Tracking" class="slide-img" />
+                        <img src="images/flex-dashboard-2.png" alt="FLEX Dashboard - Main Analytics" class="slide-img" />
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-btn" onclick="flexSlide(-1)">&#8592;</button>
+                        <span class="slide-counter" id="flexCounter">1 / 2</span>
+                        <button class="slider-btn" onclick="flexSlide(1)">&#8594;</button>
+                    </div>
+                </div>
                 <div class="tech-stack">
-                    <span>React</span> <span>TypeScript</span> <span>FastAPI</span> <span>LangChain</span> <span>Google AI</span> <span>Python</span> <span>FAISS</span>
+                    <span>React</span> <span>TypeScript</span> <span>FastAPI</span> <span>LangChain</span> <span>Google AI</span> <span>Python</span> <span>FAISS</span> <span>Power BI</span>
                 </div>
             </div>
         </div>
@@ -492,5 +515,16 @@
         <p>&copy; 2026 Yousef Alsebaey. Built with Passion & Data.</p>
     </footer>
 
+    <script>
+        let flexIndex = 0;
+        function flexSlide(dir) {
+            const track = document.getElementById('flexTrack');
+            const imgs = track.querySelectorAll('.slide-img');
+            const total = imgs.length;
+            flexIndex = (flexIndex + dir + total) % total;
+            track.style.transform = 'translateX(-' + (flexIndex * 100) + '%)';
+            document.getElementById('flexCounter').textContent = (flexIndex + 1) + ' / ' + total;
+        }
+    </script>
 </body>
 </html>

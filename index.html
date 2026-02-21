@@ -27,7 +27,7 @@
                     <div class="ml-10 flex items-baseline space-x-6 text-sm">
                         <a href="#about" class="text-slate-300 hover:text-sky-400 transition">About</a>
                         <a href="#experience" class="text-slate-300 hover:text-sky-400 transition">Experience</a>
-                        <a href="#skills" class="text-slate-300 hover:text-sky-400 transition">Skills</a>
+                        <a href="#skills" class="text-slate-300 hover:text-sky-400 transition">Skills & Services</a>
                         <a href="#projects" class="text-slate-300 hover:text-sky-400 transition">Projects</a>
                         <a href="#contact" class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-full transition">Contact Me</a>
                     </div>
@@ -43,7 +43,7 @@
             <h1 class="text-5xl md:text-7xl font-bold leading-tight">Yousef <br><span class="gradient-text">Alsebaey</span></h1>
             <p class="text-xl text-slate-300 font-light">Data Engineer & AI Innovator</p>
             <p class="text-slate-400 leading-relaxed">
-                My journey bridges the endurance of an ultra-marathoner with the precision of data engineering. I am passionate about transforming massive datasets—from running analytics to enterprise data—into actionable insights. Currently pursuing my B.Eng in AI at Mansoura University and building scalable pipelines on Azure.
+                My journey blends a lifelong passion for visuals with the precision of data science. From early days in photography to leveraging Python and Machine Learning, I transform massive datasets into actionable, compelling stories. Currently pursuing my B.Eng in AI at Mansoura University.
             </p>
             <div class="flex flex-wrap gap-4 pt-4">
                 <a href="#contact" class="bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-full font-medium transition shadow-lg shadow-sky-500/30">Get In Touch</a>
@@ -118,29 +118,45 @@
         </div>
     </section>
 
-    <!-- Skills -->
+    <!-- Skills & Services -->
     <section id="skills" class="py-20 max-w-7xl mx-auto px-4">
-        <h2 class="section-title"><span>Technical Skills</span></h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 text-center">
-            <div class="card flex flex-col items-center justify-center">
+        <h2 class="section-title"><span>Skills & Services</span></h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 text-center mb-16">
+            <div class="card flex flex-col items-center justify-center border-t-4 border-sky-400">
                 <i class="fas fa-database text-4xl text-sky-400 mb-4"></i>
-                <h3 class="font-bold">Data Warehousing</h3>
-                <p class="text-sm text-slate-400 mt-2">ETL/ELT, Dimensional Modeling</p>
+                <h3 class="font-bold">Data Engineering</h3>
+                <p class="text-sm text-slate-400 mt-2">Pipelines, Warehousing, Azure, SQL Server</p>
             </div>
-            <div class="card flex flex-col items-center justify-center">
+            <div class="card flex flex-col items-center justify-center border-t-4 border-yellow-400">
                 <i class="fab fa-python text-4xl text-yellow-400 mb-4"></i>
                 <h3 class="font-bold">Python & ML</h3>
-                <p class="text-sm text-slate-400 mt-2">Pandas, Scikit-learn, MLflow</p>
+                <p class="text-sm text-slate-400 mt-2">TensorFlow, PyTorch, Pandas, Scikit-learn</p>
             </div>
-            <div class="card flex flex-col items-center justify-center">
-                <i class="fab fa-microsoft text-4xl text-blue-400 mb-4"></i>
-                <h3 class="font-bold">Cloud & Big Data</h3>
-                <p class="text-sm text-slate-400 mt-2">Azure Data Factory, Spark</p>
+            <div class="card flex flex-col items-center justify-center border-t-4 border-purple-400">
+                <i class="fas fa-brain text-4xl text-purple-400 mb-4"></i>
+                <h3 class="font-bold">Predictive Analytics</h3>
+                <p class="text-sm text-slate-400 mt-2">Machine Learning, Predictive Maintenance</p>
             </div>
-            <div class="card flex flex-col items-center justify-center">
+            <div class="card flex flex-col items-center justify-center border-t-4 border-green-400">
                 <i class="fas fa-chart-pie text-4xl text-green-400 mb-4"></i>
                 <h3 class="font-bold">BI & Visualization</h3>
-                <p class="text-sm text-slate-400 mt-2">Power BI, Tableau</p>
+                <p class="text-sm text-slate-400 mt-2">Power BI, Interactive Dashboards</p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700">
+                <h4 class="text-sky-400 font-bold mb-3"><i class="fas fa-cogs mr-2"></i> Data Acquisition & Integration</h4>
+                <p class="text-sm text-slate-400">Collecting data from databases, APIs, and IoT devices. Cleaning, preparing, and integrating data from multiple disparate systems.</p>
+            </div>
+            <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700">
+                <h4 class="text-sky-400 font-bold mb-3"><i class="fas fa-server mr-2"></i> Data Warehousing & Lakes</h4>
+                <p class="text-sm text-slate-400">Designing and implementing efficient data lakes and warehouses. Optimizing data structures and query performance for large datasets.</p>
+            </div>
+            <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-700">
+                <h4 class="text-sky-400 font-bold mb-3"><i class="fas fa-shield-alt mr-2"></i> Quality & Governance</h4>
+                <p class="text-sm text-slate-400">Ensuring data accuracy, consistency, and compliance. Implementing strict data quality checks and monitoring mechanisms.</p>
             </div>
         </div>
     </section>
@@ -149,22 +165,64 @@
     <section id="projects" class="py-20 bg-slate-800/50">
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="section-title"><span>Featured Projects</span></h2>
-            <div class="grid md:grid-cols-3 gap-8 mt-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                
                 <div class="card flex flex-col h-full">
                     <div class="flex-grow">
                         <div class="bg-sky-500/10 w-12 h-12 rounded-lg flex items-center justify-center text-sky-400 mb-6">
-                            <i class="fas fa-hashtag text-xl"></i>
+                            <i class="fas fa-chart-line text-xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">Social Media Dashboard</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Automated analytics solution ingesting metrics from multiple APIs. Reduced manual reporting by 65% with a dynamic Power BI dashboard.</p>
+                        <h3 class="text-xl font-bold mb-3">Social Media Analytics (DEPI)</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Extracted insights from multiple platforms to provide key metrics in an interactive Power BI dashboard, empowering data-driven audience targeting.</p>
                     </div>
                     <div class="mt-6 flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">Python</span>
-                        <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">SQL Server</span>
                         <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">Power BI</span>
+                        <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">Python</span>
                     </div>
                 </div>
 
+                <div class="card flex flex-col h-full">
+                    <div class="flex-grow">
+                        <div class="bg-red-500/10 w-12 h-12 rounded-lg flex items-center justify-center text-red-400 mb-6">
+                            <i class="fas fa-search-dollar text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Fraud Detection Model</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Developed a predictive model that accurately identified fraudulent transactions, safeguarding businesses from significant financial losses.</p>
+                    </div>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">Machine Learning</span>
+                        <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">Python</span>
+                    </div>
+                </div>
+
+                <div class="card flex flex-col h-full">
+                    <div class="flex-grow">
+                        <div class="bg-yellow-500/10 w-12 h-12 rounded-lg flex items-center justify-center text-yellow-400 mb-6">
+                            <i class="fas fa-tools text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Predictive Maintenance</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Implemented an advanced system that predicted equipment failures, drastically reducing downtime and improving operational efficiency.</p>
+                    </div>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">Predictive Analytics</span>
+                        <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">TensorFlow</span>
+                    </div>
+                </div>
+
+                <div class="card flex flex-col h-full">
+                    <div class="flex-grow">
+                        <div class="bg-green-500/10 w-12 h-12 rounded-lg flex items-center justify-center text-green-400 mb-6">
+                            <i class="fas fa-heartbeat text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">ECG Classification (CNN)</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Leveraged Convolutional Neural Networks to classify ECG signals, showcasing advanced application of deep learning in healthcare.</p>
+                    </div>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">Deep Learning</span>
+                        <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">CNN</span>
+                    </div>
+                </div>
+                
                 <div class="card flex flex-col h-full">
                     <div class="flex-grow">
                         <div class="bg-indigo-500/10 w-12 h-12 rounded-lg flex items-center justify-center text-indigo-400 mb-6">
@@ -176,32 +234,31 @@
                     <div class="mt-6 flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">Python</span>
                         <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">MongoDB</span>
-                        <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">REST API</span>
                     </div>
                 </div>
 
                 <div class="card flex flex-col h-full">
                     <div class="flex-grow">
                         <div class="bg-purple-500/10 w-12 h-12 rounded-lg flex items-center justify-center text-purple-400 mb-6">
-                            <i class="fas fa-question-circle text-xl"></i>
+                            <i class="fas fa-trophy text-xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">Quiz Service Microservice</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Architected a strict three-layer microservice ensuring clear separation between data, business, and presentation logic using optimized MongoDB structures.</p>
+                        <h3 class="text-xl font-bold mb-3">Rowad Competition Winner</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Secured first place in a national business competition through team leadership and innovative data-driven problem solving.</p>
                     </div>
                     <div class="mt-6 flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">Architecture</span>
-                        <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">MongoDB</span>
-                        <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">Python</span>
+                        <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">Leadership</span>
+                        <span class="px-3 py-1 bg-slate-700 text-xs rounded-full text-slate-300">Problem Solving</span>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="py-20 max-w-4xl mx-auto px-4 text-center">
-        <h2 class="section-title"><span>Get In Touch</span></h2>
-        <p class="text-slate-400 mb-8 text-lg">Looking to collaborate on data engineering, AI, or even run an ultra-marathon? Let's connect.</p>
+        <h2 class="section-title"><span>Let's Build Something Great Together</span></h2>
+        <p class="text-slate-400 mb-8 text-lg">I'm eager to contribute my skills to a dynamic team. Let's collaborate on exciting projects and create innovative solutions.</p>
         
         <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 text-slate-300">
             <a href="mailto:yousefayman150@gmail.com" class="flex items-center justify-center gap-3 hover:text-sky-400 transition">

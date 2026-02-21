@@ -51,11 +51,13 @@
             box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
             transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
             border: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
         }
 
         .content-card:hover {
             transform: translateY(-7px);
-            border-color: #64ffda;
+            border-color: #38bdf8;
             box-shadow: 0 20px 30px -15px rgba(2,12,27,0.7);
         }
 
@@ -67,7 +69,7 @@
         }
 
         .company {
-            color: #64ffda;
+            color: #38bdf8;
             font-size: 1rem;
             margin-bottom: 15px;
             font-weight: 600;
@@ -100,11 +102,6 @@
         }
 
         /* Project Specific Styling */
-        .project-card {
-            display: flex;
-            flex-direction: column;
-        }
-
         .project-card p {
             color: #8892b0;
             font-size: 0.95rem;
@@ -122,7 +119,7 @@
         }
 
         .folder-icon {
-            color: #64ffda;
+            color: #38bdf8;
             font-style: normal;
         }
 
@@ -137,7 +134,7 @@
         }
 
         .github-link:hover {
-            color: #64ffda;
+            color: #38bdf8;
         }
 
         .tech-stack {
@@ -148,6 +145,46 @@
             font-family: monospace;
             font-size: 0.85rem;
             color: #a8b2d1;
+        }
+        
+        /* Certifications Styling */
+        .cert-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            background-color: #1e293b;
+        }
+        
+        .cert-icon {
+            font-size: 2.5rem;
+            color: #38bdf8;
+            background: rgba(56, 189, 248, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .cert-info {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        
+        .cert-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 2px;
+        }
+        
+        .cert-info p {
+            color: #8892b0;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .cert-info span {
+            color: #a8b2d1;
+            font-family: monospace;
+            font-size: 0.8rem;
         }
 
         /* Custom image hover styling */
@@ -202,8 +239,8 @@
                     <div class="ml-10 flex items-baseline space-x-6 text-sm">
                         <a href="#about" class="text-slate-300 hover:text-sky-400 transition">About</a>
                         <a href="#experience" class="text-slate-300 hover:text-sky-400 transition">Experience</a>
-                        <a href="#skills" class="text-slate-300 hover:text-sky-400 transition">Skills</a>
                         <a href="#projects" class="text-slate-300 hover:text-sky-400 transition">Projects</a>
+                        <a href="#certifications" class="text-slate-300 hover:text-sky-400 transition">Certifications</a>
                         <a href="#contact" class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-full transition">Contact Me</a>
                     </div>
                 </div>
@@ -243,7 +280,7 @@
             <div class="content-card">
                 <div class="card-header">
                     <h3>Microsoft Data Engineer Trainee</h3>
-                    <span class="date">Jun 2024 - Dec 2024</span>
+                    <span class="date">Jun 2024 - Oct 2024</span>
                 </div>
                 <h4 class="company">Digital Egypt Pioneers Initiative (DEPI)</h4>
                 <ul class="card-list">
@@ -254,6 +291,19 @@
                 </ul>
             </div>
 
+            <div class="content-card">
+                <div class="card-header">
+                    <h3>Data Science & Analytics Intern</h3>
+                    <span class="date">Apr 2025 - Jul 2025</span>
+                </div>
+                <h4 class="company">Brainwave Matrix Solutions</h4>
+                <ul class="card-list">
+                    <li>Completed a 12-week intensive internship focusing on data science and advanced analytics.</li>
+                    <li>Demonstrated the ability to interpret and analyze complex datasets.</li>
+                    <li>Delivered actionable insights supporting strategic decision-making and business impact.</li>
+                </ul>
+            </div>
+            
             <div class="content-card">
                 <div class="card-header">
                     <h3>Data Engineer Committee Member</h3>
@@ -342,6 +392,67 @@
                 <p>Leveraged advanced Convolutional Neural Networks (CNN) to classify ECG signals, showcasing the successful application of deep learning algorithms in the healthcare and medical diagnostics space.</p>
                 <div class="tech-stack">
                     <span>Deep Learning</span> <span>CNN</span> <span>Python</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section-container bg-slate-900/50">
+        <h2 class="section-title">Certifications & Badges</h2>
+        
+        <div class="grid md:grid-cols-2 gap-6 mt-12">
+            <div class="content-card cert-card">
+                <i class="fas fa-certificate cert-icon"></i>
+                <div class="cert-info">
+                    <h3>Microsoft Data Engineer</h3>
+                    <p>Digital Egypt Pioneers Initiative (DEPI)</p>
+                    <span>Issued: Oct 2024</span>
+                </div>
+            </div>
+
+            <div class="content-card cert-card">
+                <i class="fas fa-database cert-icon"></i>
+                <div class="cert-info">
+                    <h3>Associate Data Engineer</h3>
+                    <p>DataCamp (#DEA0018375163331)</p>
+                    <span>Issued: Sep 2024</span>
+                </div>
+            </div>
+
+            <div class="content-card cert-card">
+                <i class="fas fa-robot cert-icon"></i>
+                <div class="cert-info">
+                    <h3>Intro to Generative AI with AWS</h3>
+                    <p>Udacity (#1a0a203a-43a1...)</p>
+                    <span>Issued: Jul 2025</span>
+                </div>
+            </div>
+
+            <div class="content-card cert-card">
+                <i class="fas fa-brain cert-icon"></i>
+                <div class="cert-info">
+                    <h3>Understanding Artificial Intelligence</h3>
+                    <p>DataCamp (#UAI9246244230)</p>
+                    <span>Issued: Oct 2025</span>
+                </div>
+            </div>
+
+            <div class="content-card cert-card">
+                <i class="fas fa-code cert-icon"></i>
+                <div class="cert-info">
+                    <h3>Problem Solving (Intermediate)</h3>
+                    <p>HackerRank (#126E7B1F9AC6)</p>
+                    <span>Issued: Mar 2025</span>
+                </div>
+            </div>
+
+            <div class="content-card cert-card">
+                <i class="fas fa-server cert-icon"></i>
+                <div class="cert-info">
+                    <h3>Introduction to SQL</h3>
+                    <p>DataCamp (#33,300,783)</p>
+                    <span>Issued: Mar 2024</span>
                 </div>
             </div>
         </div>

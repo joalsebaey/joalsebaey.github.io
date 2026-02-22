@@ -334,15 +334,61 @@
         <h2 class="section-title">Some Things I've Built</h2>
         
         <div class="card-grid">
-            <div class="content-card project-card">
+            <div class="content-card project-card flex-featured-card">
                 <div class="project-links">
                     <i class="fas fa-folder folder-icon"></i>
-                    <a href="https://github.com/joalsebaey" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+                    <div style="display:flex;gap:8px;align-items:center;">
+                        <span style="font-size:0.72rem;background:#0d3349;color:#38bdf8;padding:3px 8px;border-radius:4px;font-weight:500;">DEPI Project</span>
+                        <a href="https://github.com/joalsebaey" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
                 </div>
-                <h3>Social Media Dashboard</h3>
-                <p>Designed a Microsoft SQL Server database schema optimized for social media metrics. Engineered custom Python ETL pipelines to extract data from APIs and developed a dynamic Power BI dashboard that reduced manual reporting time by 65%.</p>
-                <div class="tech-stack">
-                    <span>SQL Server</span> <span>Python</span> <span>Power BI</span> <span>ETL</span>
+                <h3>Social Media Analytics Dashboard <span style="font-size:0.72rem;background:#1e3a5f;color:#38bdf8;padding:3px 8px;border-radius:4px;margin-left:8px;font-weight:500;">Microsoft Data Engineer Track</span></h3>
+                <p style="color:#8892b0;font-size:0.95rem;margin-top:12px;line-height:1.6;">A full end-to-end data engineering and analytics project developed under the <span style="color:#38bdf8;font-weight:600;">Digital Egypt Pioneers Initiative (DEPI)</span>. Analyzed social media data across <span style="color:#38bdf8;font-weight:600;">5 platforms</span> (Facebook, TikTok, Twitter, Instagram, Snapchat) covering <span style="color:#38bdf8;font-weight:600;">10,000+ records</span> with zero missing values. Built automated Python ETL pipelines and a dynamic Power BI dashboard, reducing manual reporting time by <span style="color:#38bdf8;font-weight:600;">65%</span>.</p>
+                <!-- Key Stats Row -->
+                <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;">
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
+                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">5</div>
+                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Platforms</div>
+                    </div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
+                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">10K+</div>
+                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Records</div>
+                    </div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
+                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">65%</div>
+                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Less Manual Work</div>
+                    </div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
+                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">4</div>
+                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Dashboards</div>
+                    </div>
+                </div>
+                <!-- Objectives -->
+                <div style="margin-top:18px;">
+                    <p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-bullseye" style="color:#38bdf8;margin-right:6px;"></i>Key Objectives</p>
+                    <ul style="color:#8892b0;font-size:0.88rem;padding-left:18px;line-height:1.8;">
+                        <li>Analyze social media data to extract insights on content performance &amp; audience behavior</li>
+                        <li>Develop an interactive Power BI dashboard visualizing KPIs for real-time monitoring</li>
+                        <li>Enable data-driven decision-making to optimize marketing strategies</li>
+                    </ul>
+                </div>
+                <!-- Key Insights -->
+                <div style="margin-top:14px;">
+                    <p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-lightbulb" style="color:#38bdf8;margin-right:6px;"></i>Key Insights</p>
+                    <ul style="color:#8892b0;font-size:0.88rem;padding-left:18px;line-height:1.8;">
+                        <li><span style="color:#38bdf8;">Snapchat &amp; TikTok</span> showed the highest positive sentiment &mdash; best for campaign targeting</li>
+                        <li>Top content cities: <span style="color:#38bdf8;">Tokyo, New York, Cairo</span> with strongest follower counts &amp; engagement</li>
+                        <li>52% positive, 47.55% negative, 0.45% neutral overall sentiment distribution</li>
+                        <li>Memes &amp; Photos ranked highest in post volume across all platforms 2023&ndash;2024</li>
+                    </ul>
+                </div>
+                <!-- Team -->
+                <div style="margin-top:14px;padding:12px;background:#0a192f;border-radius:6px;border:1px solid #1e3a5f;">
+                    <p style="color:#ccd6f6;font-size:0.85rem;font-weight:600;margin-bottom:6px;"><i class="fas fa-users" style="color:#38bdf8;margin-right:6px;"></i>Team</p>
+                    <p style="color:#8892b0;font-size:0.82rem;">Yousef Alsebaey &bull; Amr Khaled &bull; Ibrahim Hegazi &bull; Ammar Yasser &bull; Ashraf Morgan &bull; Mahmoud Osama</p>
+                </div>
+                <div class="tech-stack" style="margin-top:16px;">
+                    <span>Python</span> <span>SQL Server</span> <span>Power BI</span> <span>ETL Pipelines</span> <span>Kaggle Dataset</span> <span>Azure</span> <span>Pandas</span> <span>NumPy</span>
                 </div>
             </div>
 

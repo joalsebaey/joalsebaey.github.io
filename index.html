@@ -392,6 +392,91 @@
                 </div>
             </div>
 
+            <!-- ===== ULTRA-MARATHON ANALYTICS DASHBOARD ===== -->
+            <div class="content-card project-card flex-featured-card">
+                <div class="project-links">
+                    <i class="fas fa-folder folder-icon"></i>
+                    <div style="display:flex;gap:8px;align-items:center;">
+                        <span style="font-size:0.72rem;background:#0d3349;color:#38bdf8;padding:3px 8px;border-radius:4px;font-weight:500;">Personal Project</span>
+                        <a href="https://github.com/joalsebaey/ultra-marathon-analytics" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <h3>Ultra-Marathon Analytics Dashboard <span style="font-size:0.72rem;background:#1e3a5f;color:#38bdf8;padding:3px 8px;border-radius:4px;margin-left:8px;font-weight:500;">1996 – 2022</span></h3>
+                <p style="color:#8892b0;font-size:0.95rem;margin-top:12px;line-height:1.6;">
+                    An end-to-end <span style="color:#38bdf8;font-weight:600;">big data engineering &amp; BI project</span> processing <span style="color:#38bdf8;font-weight:600;">4.63 million</span> ultra-marathon race records across 26 years. Built a full PySpark ETL pipeline that reduced raw data from <span style="color:#38bdf8;font-weight:600;">7.4M to 4.63M clean records</span> (95% model size reduction), then delivered a production-ready <span style="color:#38bdf8;font-weight:600;">Power BI dashboard</span> with two interactive pages analyzing global participation growth, gender trends, peak performance ages, elite vs average benchmarks, and race seasonality.
+                </p>
+
+                <!-- Key Stats Row -->
+                <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;">
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
+                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">4.63M</div>
+                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Race Records</div>
+                    </div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
+                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">26 yrs</div>
+                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Time Span</div>
+                    </div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
+                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">95%</div>
+                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Model Size Reduction</div>
+                    </div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
+                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">15</div>
+                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">DAX Measures</div>
+                    </div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
+                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">2</div>
+                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Dashboard Pages</div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Slider -->
+                <div class="dashboard-slider" id="umSlider">
+                    <div class="slider-track" id="umTrack">
+                        <img src="images/ultra-marathon-page1.png" alt="Ultra-Marathon Dashboard – Global Growth Hub" class="slide-img" />
+                        <img src="images/ultra-marathon-page2.png" alt="Ultra-Marathon Dashboard – Performance Lab" class="slide-img" />
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-btn" onclick="umSlide(-1)">&#8592;</button>
+                        <span class="slide-counter" id="umCounter">1 / 2</span>
+                        <button class="slider-btn" onclick="umSlide(1)">&#8594;</button>
+                    </div>
+                </div>
+
+                <!-- Pipeline -->
+                <div style="margin-top:18px;">
+                    <p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-project-diagram" style="color:#38bdf8;margin-right:6px;"></i>Data Pipeline</p>
+                    <div style="display:flex;align-items:center;flex-wrap:wrap;gap:6px;font-size:0.82rem;font-family:monospace;color:#8892b0;">
+                        <span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">Kaggle CSV (7.4M rows)</span>
+                        <span style="color:#38bdf8;">→</span>
+                        <span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">PySpark ETL</span>
+                        <span style="color:#38bdf8;">→</span>
+                        <span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">5 Aggregated CSVs</span>
+                        <span style="color:#38bdf8;">→</span>
+                        <span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">Power BI Star Schema</span>
+                        <span style="color:#38bdf8;">→</span>
+                        <span style="background:#0a192f;border:1px solid #38bdf8;padding:4px 10px;border-radius:4px;color:#38bdf8;">Interactive Dashboard</span>
+                    </div>
+                </div>
+
+                <!-- Key Insights -->
+                <div style="margin-top:16px;">
+                    <p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-lightbulb" style="color:#38bdf8;margin-right:6px;"></i>Key Insights Discovered</p>
+                    <ul style="color:#8892b0;font-size:0.88rem;padding-left:18px;line-height:1.8;">
+                        <li><span style="color:#38bdf8;">Hockey Stick Growth:</span> Participation grew 20× from 2010 to 2019, with a COVID-19 drop in 2020</li>
+                        <li><span style="color:#38bdf8;">🇫🇷 France leads globally</span> with 1.1M finishers (23%), followed by 🇺🇸 USA and 🇯🇵 Japan</li>
+                        <li><span style="color:#38bdf8;">Peak endurance age is 35–45:</span> averaging 6.39 km/h, outperforming younger and older runners</li>
+                        <li><span style="color:#38bdf8;">Pace drops 25%</span> from 50km to 100mi races &mdash; Elite athletes maintain pace better (−20%) than average (−28%)</li>
+                        <li><span style="color:#38bdf8;">June is the peak racing month</span> with 407K+ finishers across all distances</li>
+                    </ul>
+                </div>
+
+                <div class="tech-stack" style="margin-top:16px;">
+                    <span>PySpark</span> <span>Python</span> <span>Power BI</span> <span>DAX</span> <span>Pandas</span> <span>Kaggle Dataset</span> <span>Star Schema</span> <span>ETL Pipeline</span>
+                </div>
+            </div>
+            <!-- ===== END ULTRA-MARATHON ===== -->
+
             <div class="content-card project-card">
                 <div class="project-links">
                     <i class="fas fa-folder folder-icon"></i>
@@ -570,6 +655,16 @@
             flexIndex = (flexIndex + dir + total) % total;
             track.style.transform = 'translateX(-' + (flexIndex * 100) + '%)';
             document.getElementById('flexCounter').textContent = (flexIndex + 1) + ' / ' + total;
+        }
+
+        let umIndex = 0;
+        function umSlide(dir) {
+            const track = document.getElementById('umTrack');
+            const imgs = track.querySelectorAll('.slide-img');
+            const total = imgs.length;
+            umIndex = (umIndex + dir + total) % total;
+            track.style.transform = 'translateX(-' + (umIndex * 100) + '%)';
+            document.getElementById('umCounter').textContent = (umIndex + 1) + ' / ' + total;
         }
     </script>
 </body>

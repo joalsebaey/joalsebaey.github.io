@@ -10,223 +10,36 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; scroll-behavior: smooth; }
         .gradient-text { background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        /* Advanced Section Container */
-        .section-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 100px 20px;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            color: #ccd6f6;
-            margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-            font-weight: 700;
-        }
-
-        .section-title::after {
-            content: "";
-            display: block;
-            height: 1px;
-            width: 300px;
-            background-color: #233554;
-            margin-left: 20px;
-        }
-
-        /* Responsive Grid Layout */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        /* The Interactive Content Card */
-        .content-card {
-            background-color: #112240;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
-            transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-            border: 1px solid transparent;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .content-card:hover {
-            transform: translateY(-7px);
-            border-color: #38bdf8;
-            box-shadow: 0 20px 30px -15px rgba(2,12,27,0.7);
-        }
-
-        .content-card h3 {
-            color: #ccd6f6;
-            font-size: 1.3rem;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        .company {
-            color: #38bdf8;
-            font-size: 1rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .date {
-            color: #8892b0;
-            font-size: 0.9rem;
-            font-family: monospace;
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-        }
-
-        .card-list {
-            color: #8892b0;
-            font-size: 0.95rem;
-            padding-left: 20px;
-            margin-top: 15px;
-            list-style-type: disc;
-        }
-
-        .card-list li {
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
-
-        /* Project Specific Styling */
-        .project-card p {
-            color: #8892b0;
-            font-size: 0.95rem;
-            margin-top: 15px;
-            flex-grow: 1;
-            line-height: 1.6;
-        }
-
-        .project-links {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-            align-items: center;
-        }
-
-        .folder-icon {
-            color: #38bdf8;
-            font-style: normal;
-        }
-
-        .github-link {
-            color: #a8b2d1;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .github-link:hover {
-            color: #38bdf8;
-        }
-
-        .tech-stack {
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            font-family: monospace;
-            font-size: 0.85rem;
-            color: #a8b2d1;
-        }
-        
-        /* Certifications Styling */
-        .cert-card {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 20px;
-            background-color: #1e293b;
-        }
-        
-        .cert-icon {
-            font-size: 2.5rem;
-            color: #38bdf8;
-            background: rgba(56, 189, 248, 0.1);
-            padding: 15px;
-            border-radius: 8px;
-        }
-        
-        .cert-info {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-        
-        .cert-info h3 {
-            font-size: 1.1rem;
-            margin-bottom: 2px;
-        }
-        
-        .cert-info p {
-            color: #8892b0;
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-        }
-
-        .cert-info span {
-            color: #a8b2d1;
-            font-family: monospace;
-            font-size: 0.8rem;
-        }
-
-        /* Custom image hover styling */
-        .profile-img-container {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .profile-img-container::before {
-            content: '';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 100%;
-            height: 100%;
-            border: 2px solid #38bdf8;
-            border-radius: 0.5rem;
-            z-index: -1;
-            transition: transform 0.3s ease;
-        }
-        
-        .profile-img-container:hover::before {
-            transform: translate(-10px, -10px);
-        }
-
-        .profile-img {
-            filter: grayscale(100%);
-            transition: filter 0.3s ease;
-            border-radius: 0.5rem;
-            width: 100%;
-            height: auto;
-        }
-
-        .profile-img-container:hover .profile-img {
-            filter: grayscale(0%);
-        }
-        
-        .accent-color {
-            color: #38bdf8;
-            font-weight: 600;
-        }
-        /* Dashboard Slider Styles */
+        .section-container { max-width: 1000px; margin: 0 auto; padding: 100px 20px; }
+        .section-title { font-size: 2rem; color: #ccd6f6; margin-bottom: 40px; display: flex; align-items: center; font-weight: 700; }
+        .section-title::after { content: ""; display: block; height: 1px; width: 300px; background-color: #233554; margin-left: 20px; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        .content-card { background-color: #112240; padding: 25px; border-radius: 8px; box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7); transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1); border: 1px solid transparent; display: flex; flex-direction: column; }
+        .content-card:hover { transform: translateY(-7px); border-color: #38bdf8; box-shadow: 0 20px 30px -15px rgba(2,12,27,0.7); }
+        .content-card h3 { color: #ccd6f6; font-size: 1.3rem; margin-bottom: 5px; font-weight: 600; }
+        .company { color: #38bdf8; font-size: 1rem; margin-bottom: 15px; font-weight: 600; }
+        .date { color: #8892b0; font-size: 0.9rem; font-family: monospace; }
+        .card-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+        .card-list { color: #8892b0; font-size: 0.95rem; padding-left: 20px; margin-top: 15px; list-style-type: disc; }
+        .card-list li { margin-bottom: 10px; line-height: 1.5; }
+        .project-card p { color: #8892b0; font-size: 0.95rem; margin-top: 15px; flex-grow: 1; line-height: 1.6; }
+        .project-links { display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 1.5rem; align-items: center; }
+        .folder-icon { color: #38bdf8; font-style: normal; }
+        .github-link { color: #a8b2d1; text-decoration: none; font-size: 1rem; transition: color 0.2s; display: flex; align-items: center; gap: 5px; }
+        .github-link:hover { color: #38bdf8; }
+        .tech-stack { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 15px; font-family: monospace; font-size: 0.85rem; color: #a8b2d1; }
+        .cert-card { display: flex; flex-direction: row; align-items: center; gap: 20px; background-color: #1e293b; }
+        .cert-icon { font-size: 2.5rem; color: #38bdf8; background: rgba(56, 189, 248, 0.1); padding: 15px; border-radius: 8px; }
+        .cert-info { display: flex; flex-direction: column; flex-grow: 1; }
+        .cert-info h3 { font-size: 1.1rem; margin-bottom: 2px; }
+        .cert-info p { color: #8892b0; font-size: 0.9rem; margin-bottom: 5px; }
+        .cert-info span { color: #a8b2d1; font-family: monospace; font-size: 0.8rem; }
+        .profile-img-container { position: relative; z-index: 1; }
+        .profile-img-container::before { content: ''; position: absolute; top: 20px; left: 20px; width: 100%; height: 100%; border: 2px solid #38bdf8; border-radius: 0.5rem; z-index: -1; transition: transform 0.3s ease; }
+        .profile-img-container:hover::before { transform: translate(-10px, -10px); }
+        .profile-img { filter: grayscale(100%); transition: filter 0.3s ease; border-radius: 0.5rem; width: 100%; height: auto; }
+        .profile-img-container:hover .profile-img { filter: grayscale(0%); }
+        .accent-color { color: #38bdf8; font-weight: 600; }
         .flex-featured-card { grid-column: 1 / -1; }
         .dashboard-slider { margin-top: 18px; border-radius: 8px; overflow: hidden; border: 1px solid #1e3a5f; background: #0a192f; }
         .slider-track { display: flex; transition: transform 0.4s ease; }
@@ -235,14 +48,10 @@
         .slider-btn { background: #1e3a5f; color: #38bdf8; border: 1px solid #38bdf8; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 1.1rem; transition: all 0.2s; display: flex; align-items: center; justify-content: center; }
         .slider-btn:hover { background: #38bdf8; color: #0a192f; }
         .slide-counter { color: #8892b0; font-family: monospace; font-size: 0.85rem; }
-        </style>
+    </style>
 </head>
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
-    
+<nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
 <body class="antialiased selection:bg-sky-500 selection:text-white">
-
-            
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex-shrink-0 font-bold text-xl tracking-wider text-white">YA.</div>
@@ -259,18 +68,13 @@
         </div>
     </nav>
 
-    <!-- Hero Section / About -->
     <section id="about" class="pt-32 pb-20 px-4 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
         <div class="md:w-3/5 space-y-6">
             <p class="text-sky-400 font-semibold tracking-wide uppercase">Hello, I'm</p>
             <h1 class="text-5xl md:text-7xl font-bold leading-tight">Yousef <br><span class="gradient-text">Alsebaey</span></h1>
             <p class="text-xl text-slate-300 font-light">Data Engineer & AI Innovator</p>
-            <p class="text-slate-400 leading-relaxed text-lg">
-                I am a Data Engineer and AI Innovator based in Egypt, dedicated to transforming raw, complex data into scalable and actionable intelligence. Currently in my senior year studying Computer and Communication Engineering in the <span class="accent-color">Artificial Intelligence Track</span> at Mansoura University, I have maintained a <span class="accent-color">3.9/4.0 GPA</span> while actively building real-world solutions.
-            </p>
-            <p class="text-slate-400 leading-relaxed text-lg">
-                My expertise lies at the intersection of big data processing and machine learning. From designing cloud-based data warehousing solutions on <span class="accent-color">Azure</span> to handle <span class="accent-color">230 GB datasets</span>, to developing automated <span class="accent-color">Python ETL pipelines</span> that reduce manual processing time by 65%, I focus on efficiency and architecture. I am passionate about leveraging tools like <span class="accent-color">PySpark</span> for large-scale analytics, utilizing <span class="accent-color">MLflow</span> for model deployment, and continuously exploring the frontiers of Natural Language Processing.
-            </p>
+            <p class="text-slate-400 leading-relaxed text-lg">I am a Data Engineer and AI Innovator based in Egypt, dedicated to transforming raw, complex data into scalable and actionable intelligence. Currently in my senior year studying Computer and Communication Engineering in the <span class="accent-color">Artificial Intelligence Track</span> at Mansoura University, I have maintained a <span class="accent-color">3.9/4.0 GPA</span> while actively building real-world solutions.</p>
+            <p class="text-slate-400 leading-relaxed text-lg">My expertise lies at the intersection of big data processing and machine learning. From designing cloud-based data warehousing solutions on <span class="accent-color">Azure</span> to handle <span class="accent-color">230 GB datasets</span>, to developing automated <span class="accent-color">Python ETL pipelines</span> that reduce manual processing time by 65%, I focus on efficiency and architecture. I am passionate about leveraging tools like <span class="accent-color">PySpark</span> for large-scale analytics, utilizing <span class="accent-color">MLflow</span> for model deployment, and continuously exploring the frontiers of Natural Language Processing.</p>
             <div class="flex flex-wrap gap-4 pt-6">
                 <a href="Yousef-Alsebaey-Data-Engineering-CV.pdf" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white px-8 py-3 rounded border border-sky-500 font-medium transition shadow-lg shadow-sky-500/30 flex items-center gap-2"><i class="fas fa-file-download"></i> Download Resume</a>
                 <a href="https://github.com/joalsebaey" target="_blank" class="border border-slate-600 hover:border-sky-400 hover:text-sky-400 text-slate-300 px-8 py-3 rounded font-medium transition flex items-center gap-2"><i class="fab fa-github"></i> View My GitHub</a>
@@ -283,16 +87,11 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="section-container bg-slate-900/50">
         <h2 class="section-title">Where I've Worked</h2>
-        
         <div class="card-grid">
             <div class="content-card">
-                <div class="card-header">
-                    <h3>Microsoft Data Engineer Trainee</h3>
-                    <span class="date">Jun 2024 - Oct 2024</span>
-                </div>
+                <div class="card-header"><h3>Microsoft Data Engineer Trainee</h3><span class="date">Jun 2024 - Oct 2024</span></div>
                 <h4 class="company">Digital Egypt Pioneers Initiative (DEPI)</h4>
                 <ul class="card-list">
                     <li>Developed and optimized complex SQL queries for data manipulation, improving query performance by 36% for key reports.</li>
@@ -301,12 +100,8 @@
                     <li>Utilized MLflow and Hugging Face to track and deploy machine learning models within the MLOps lifecycle.</li>
                 </ul>
             </div>
-
             <div class="content-card">
-                <div class="card-header">
-                    <h3>Data Science & Analytics Intern</h3>
-                    <span class="date">Apr 2025 - Jul 2025</span>
-                </div>
+                <div class="card-header"><h3>Data Science & Analytics Intern</h3><span class="date">Apr 2025 - Jul 2025</span></div>
                 <h4 class="company">Brainwave Matrix Solutions</h4>
                 <ul class="card-list">
                     <li>Completed a 12-week intensive internship focusing on data science and advanced analytics.</li>
@@ -314,12 +109,8 @@
                     <li>Delivered actionable insights supporting strategic decision-making and business impact.</li>
                 </ul>
             </div>
-            
             <div class="content-card">
-                <div class="card-header">
-                    <h3>Data Engineer Committee Member</h3>
-                    <span class="date">Dec 2023 - Present</span>
-                </div>
+                <div class="card-header"><h3>Data Engineer Committee Member</h3><span class="date">Dec 2023 - Present</span></div>
                 <h4 class="company">IEEE Mansoura Branch</h4>
                 <ul class="card-list">
                     <li>Contributed to data engineering projects, focusing on building practical solutions.</li>
@@ -329,11 +120,11 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="section-container">
         <h2 class="section-title">Some Things I've Built</h2>
-        
         <div class="card-grid">
+
+            <!-- SOCIAL MEDIA DASHBOARD -->
             <div class="content-card project-card flex-featured-card">
                 <div class="project-links">
                     <i class="fas fa-folder folder-icon"></i>
@@ -344,55 +135,19 @@
                 </div>
                 <h3>Social Media Analytics Dashboard <span style="font-size:0.72rem;background:#1e3a5f;color:#38bdf8;padding:3px 8px;border-radius:4px;margin-left:8px;font-weight:500;">Microsoft Data Engineer Track</span></h3>
                 <p style="color:#8892b0;font-size:0.95rem;margin-top:12px;line-height:1.6;">A full end-to-end data engineering and analytics project developed under the <span style="color:#38bdf8;font-weight:600;">Digital Egypt Pioneers Initiative (DEPI)</span>. Analyzed social media data across <span style="color:#38bdf8;font-weight:600;">5 platforms</span> (Facebook, TikTok, Twitter, Instagram, Snapchat) covering <span style="color:#38bdf8;font-weight:600;">10,000+ records</span> with zero missing values. Built automated Python ETL pipelines and a dynamic Power BI dashboard, reducing manual reporting time by <span style="color:#38bdf8;font-weight:600;">65%</span>.</p>
-                <!-- Key Stats Row -->
                 <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;">
-                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
-                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">5</div>
-                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Platforms</div>
-                    </div>
-                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
-                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">10K+</div>
-                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Records</div>
-                    </div>
-                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
-                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">65%</div>
-                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Less Manual Work</div>
-                    </div>
-                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
-                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">4</div>
-                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Dashboards</div>
-                    </div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;"><div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">5</div><div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Platforms</div></div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;"><div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">10K+</div><div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Records</div></div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;"><div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">65%</div><div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Less Manual Work</div></div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;"><div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">4</div><div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Dashboards</div></div>
                 </div>
-                <!-- Objectives -->
-                <div style="margin-top:18px;">
-                    <p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-bullseye" style="color:#38bdf8;margin-right:6px;"></i>Key Objectives</p>
-                    <ul style="color:#8892b0;font-size:0.88rem;padding-left:18px;line-height:1.8;">
-                        <li>Analyze social media data to extract insights on content performance &amp; audience behavior</li>
-                        <li>Develop an interactive Power BI dashboard visualizing KPIs for real-time monitoring</li>
-                        <li>Enable data-driven decision-making to optimize marketing strategies</li>
-                    </ul>
-                </div>
-                <!-- Key Insights -->
-                <div style="margin-top:14px;">
-                    <p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-lightbulb" style="color:#38bdf8;margin-right:6px;"></i>Key Insights</p>
-                    <ul style="color:#8892b0;font-size:0.88rem;padding-left:18px;line-height:1.8;">
-                        <li><span style="color:#38bdf8;">Snapchat &amp; TikTok</span> showed the highest positive sentiment &mdash; best for campaign targeting</li>
-                        <li>Top content cities: <span style="color:#38bdf8;">Tokyo, New York, Cairo</span> with strongest follower counts &amp; engagement</li>
-                        <li>52% positive, 47.55% negative, 0.45% neutral overall sentiment distribution</li>
-                        <li>Memes &amp; Photos ranked highest in post volume across all platforms 2023&ndash;2024</li>
-                    </ul>
-                </div>
-                <!-- Team -->
-                <div style="margin-top:14px;padding:12px;background:#0a192f;border-radius:6px;border:1px solid #1e3a5f;">
-                    <p style="color:#ccd6f6;font-size:0.85rem;font-weight:600;margin-bottom:6px;"><i class="fas fa-users" style="color:#38bdf8;margin-right:6px;"></i>Team</p>
-                    <p style="color:#8892b0;font-size:0.82rem;">Yousef Alsebaey &bull; Amr Khaled &bull; Ibrahim Hegazi &bull; Ammar Yasser &bull; Ashraf Morgan &bull; Mahmoud Osama</p>
-                </div>
-                <div class="tech-stack" style="margin-top:16px;">
-                    <span>Python</span> <span>SQL Server</span> <span>Power BI</span> <span>ETL Pipelines</span> <span>Kaggle Dataset</span> <span>Azure</span> <span>Pandas</span> <span>NumPy</span>
-                </div>
+                <div style="margin-top:18px;"><p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-bullseye" style="color:#38bdf8;margin-right:6px;"></i>Key Objectives</p><ul style="color:#8892b0;font-size:0.88rem;padding-left:18px;line-height:1.8;"><li>Analyze social media data to extract insights on content performance &amp; audience behavior</li><li>Develop an interactive Power BI dashboard visualizing KPIs for real-time monitoring</li><li>Enable data-driven decision-making to optimize marketing strategies</li></ul></div>
+                <div style="margin-top:14px;"><p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-lightbulb" style="color:#38bdf8;margin-right:6px;"></i>Key Insights</p><ul style="color:#8892b0;font-size:0.88rem;padding-left:18px;line-height:1.8;"><li><span style="color:#38bdf8;">Snapchat &amp; TikTok</span> showed the highest positive sentiment &mdash; best for campaign targeting</li><li>Top content cities: <span style="color:#38bdf8;">Tokyo, New York, Cairo</span> with strongest follower counts &amp; engagement</li><li>52% positive, 47.55% negative, 0.45% neutral overall sentiment distribution</li><li>Memes &amp; Photos ranked highest in post volume across all platforms 2023&ndash;2024</li></ul></div>
+                <div style="margin-top:14px;padding:12px;background:#0a192f;border-radius:6px;border:1px solid #1e3a5f;"><p style="color:#ccd6f6;font-size:0.85rem;font-weight:600;margin-bottom:6px;"><i class="fas fa-users" style="color:#38bdf8;margin-right:6px;"></i>Team</p><p style="color:#8892b0;font-size:0.82rem;">Yousef Alsebaey &bull; Amr Khaled &bull; Ibrahim Hegazi &bull; Ammar Yasser &bull; Ashraf Morgan &bull; Mahmoud Osama</p></div>
+                <div class="tech-stack" style="margin-top:16px;"><span>Python</span> <span>SQL Server</span> <span>Power BI</span> <span>ETL Pipelines</span> <span>Kaggle Dataset</span> <span>Azure</span> <span>Pandas</span> <span>NumPy</span></div>
             </div>
 
-            <!-- ===== ULTRA-MARATHON ANALYTICS DASHBOARD ===== -->
+            <!-- ULTRA-MARATHON -->
             <div class="content-card project-card flex-featured-card">
                 <div class="project-links">
                     <i class="fas fa-folder folder-icon"></i>
@@ -401,83 +156,22 @@
                         <a href="https://github.com/joalsebaey/ultra-marathon-analytics" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
-                <h3>Ultra-Marathon Analytics Dashboard <span style="font-size:0.72rem;background:#1e3a5f;color:#38bdf8;padding:3px 8px;border-radius:4px;margin-left:8px;font-weight:500;">1996 – 2022</span></h3>
-                <p style="color:#8892b0;font-size:0.95rem;margin-top:12px;line-height:1.6;">
-                    An end-to-end <span style="color:#38bdf8;font-weight:600;">big data engineering &amp; BI project</span> processing <span style="color:#38bdf8;font-weight:600;">4.63 million</span> ultra-marathon race records across 26 years. Built a full PySpark ETL pipeline that reduced raw data from <span style="color:#38bdf8;font-weight:600;">7.4M to 4.63M clean records</span> (95% model size reduction), then delivered a production-ready <span style="color:#38bdf8;font-weight:600;">Power BI dashboard</span> with two interactive pages analyzing global participation growth, gender trends, peak performance ages, elite vs average benchmarks, and race seasonality.
-                </p>
-
-                <!-- Key Stats Row -->
+                <h3>Ultra-Marathon Analytics Dashboard <span style="font-size:0.72rem;background:#1e3a5f;color:#38bdf8;padding:3px 8px;border-radius:4px;margin-left:8px;font-weight:500;">1996 &ndash; 2022</span></h3>
+                <p style="color:#8892b0;font-size:0.95rem;margin-top:12px;line-height:1.6;">An end-to-end <span style="color:#38bdf8;font-weight:600;">big data engineering &amp; BI project</span> processing <span style="color:#38bdf8;font-weight:600;">4.63 million</span> ultra-marathon race records across 26 years. Built a full PySpark ETL pipeline that reduced raw data from <span style="color:#38bdf8;font-weight:600;">7.4M to 4.63M clean records</span> (95% model size reduction), then delivered a production-ready <span style="color:#38bdf8;font-weight:600;">Power BI dashboard</span> with two interactive pages.</p>
                 <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;">
-                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
-                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">4.63M</div>
-                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Race Records</div>
-                    </div>
-                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
-                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">26 yrs</div>
-                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Time Span</div>
-                    </div>
-                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
-                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">95%</div>
-                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Model Size Reduction</div>
-                    </div>
-                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
-                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">15</div>
-                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">DAX Measures</div>
-                    </div>
-                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
-                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">2</div>
-                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Dashboard Pages</div>
-                    </div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;"><div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">4.63M</div><div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Race Records</div></div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;"><div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">26 yrs</div><div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Time Span</div></div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;"><div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">95%</div><div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Model Size Reduction</div></div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;"><div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">15</div><div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">DAX Measures</div></div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;"><div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">2</div><div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Dashboard Pages</div></div>
                 </div>
-
-                <!-- Dashboard Slider -->
-                <div class="dashboard-slider" id="umSlider">
-                    <div class="slider-track" id="umTrack">
-                        <img src="images/ultra-marathon-page1.png" alt="Ultra-Marathon Dashboard – Global Growth Hub" class="slide-img" />
-                        <img src="images/ultra-marathon-page2.png" alt="Ultra-Marathon Dashboard – Performance Lab" class="slide-img" />
-                    </div>
-                    <div class="slider-controls">
-                        <button class="slider-btn" onclick="umSlide(-1)">&#8592;</button>
-                        <span class="slide-counter" id="umCounter">1 / 2</span>
-                        <button class="slider-btn" onclick="umSlide(1)">&#8594;</button>
-                    </div>
-                </div>
-
-                <!-- Pipeline -->
-                <div style="margin-top:18px;">
-                    <p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-project-diagram" style="color:#38bdf8;margin-right:6px;"></i>Data Pipeline</p>
-                    <div style="display:flex;align-items:center;flex-wrap:wrap;gap:6px;font-size:0.82rem;font-family:monospace;color:#8892b0;">
-                        <span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">Kaggle CSV (7.4M rows)</span>
-                        <span style="color:#38bdf8;">→</span>
-                        <span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">PySpark ETL</span>
-                        <span style="color:#38bdf8;">→</span>
-                        <span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">5 Aggregated CSVs</span>
-                        <span style="color:#38bdf8;">→</span>
-                        <span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">Power BI Star Schema</span>
-                        <span style="color:#38bdf8;">→</span>
-                        <span style="background:#0a192f;border:1px solid #38bdf8;padding:4px 10px;border-radius:4px;color:#38bdf8;">Interactive Dashboard</span>
-                    </div>
-                </div>
-
-                <!-- Key Insights -->
-                <div style="margin-top:16px;">
-                    <p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-lightbulb" style="color:#38bdf8;margin-right:6px;"></i>Key Insights Discovered</p>
-                    <ul style="color:#8892b0;font-size:0.88rem;padding-left:18px;line-height:1.8;">
-                        <li><span style="color:#38bdf8;">Hockey Stick Growth:</span> Participation grew 20&times; from 2010 to 2019, with a COVID-19 drop in 2020</li>
-                        <li><span style="color:#38bdf8;">&#127467;&#127479; France leads globally</span> with 1.1M finishers (23%), followed by &#127482;&#127480; USA and &#127471;&#127477; Japan</li>
-                        <li><span style="color:#38bdf8;">Peak endurance age is 35&ndash;45:</span> averaging 6.39 km/h, outperforming younger and older runners</li>
-                        <li><span style="color:#38bdf8;">Pace drops 25%</span> from 50km to 100mi races &mdash; Elite athletes maintain pace better (&minus;20%) than average (&minus;28%)</li>
-                        <li><span style="color:#38bdf8;">June is the peak racing month</span> with 407K+ finishers across all distances</li>
-                    </ul>
-                </div>
-
-                <div class="tech-stack" style="margin-top:16px;">
-                    <span>PySpark</span> <span>Python</span> <span>Power BI</span> <span>DAX</span> <span>Pandas</span> <span>Kaggle Dataset</span> <span>Star Schema</span> <span>ETL Pipeline</span>
-                </div>
+                <div class="dashboard-slider" id="umSlider"><div class="slider-track" id="umTrack"><img src="images/ultra-marathon-page1.png" alt="Ultra-Marathon Dashboard &ndash; Global Growth Hub" class="slide-img" /><img src="images/ultra-marathon-page2.png" alt="Ultra-Marathon Dashboard &ndash; Performance Lab" class="slide-img" /></div><div class="slider-controls"><button class="slider-btn" onclick="umSlide(-1)">&#8592;</button><span class="slide-counter" id="umCounter">1 / 2</span><button class="slider-btn" onclick="umSlide(1)">&#8594;</button></div></div>
+                <div style="margin-top:18px;"><p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-project-diagram" style="color:#38bdf8;margin-right:6px;"></i>Data Pipeline</p><div style="display:flex;align-items:center;flex-wrap:wrap;gap:6px;font-size:0.82rem;font-family:monospace;color:#8892b0;"><span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">Kaggle CSV (7.4M rows)</span><span style="color:#38bdf8;">&rarr;</span><span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">PySpark ETL</span><span style="color:#38bdf8;">&rarr;</span><span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">5 Aggregated CSVs</span><span style="color:#38bdf8;">&rarr;</span><span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">Power BI Star Schema</span><span style="color:#38bdf8;">&rarr;</span><span style="background:#0a192f;border:1px solid #38bdf8;padding:4px 10px;border-radius:4px;color:#38bdf8;">Interactive Dashboard</span></div></div>
+                <div style="margin-top:16px;"><p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-lightbulb" style="color:#38bdf8;margin-right:6px;"></i>Key Insights Discovered</p><ul style="color:#8892b0;font-size:0.88rem;padding-left:18px;line-height:1.8;"><li><span style="color:#38bdf8;">Hockey Stick Growth:</span> Participation grew 20&times; from 2010 to 2019, with a COVID-19 drop in 2020</li><li><span style="color:#38bdf8;">&#127467;&#127479; France leads globally</span> with 1.1M finishers (23%), followed by &#127482;&#127480; USA and &#127471;&#127477; Japan</li><li><span style="color:#38bdf8;">Peak endurance age is 35&ndash;45:</span> averaging 6.39 km/h, outperforming younger and older runners</li><li><span style="color:#38bdf8;">Pace drops 25%</span> from 50km to 100mi races &mdash; Elite athletes maintain pace better (&minus;20%) than average (&minus;28%)</li><li><span style="color:#38bdf8;">June is the peak racing month</span> with 407K+ finishers across all distances</li></ul></div>
+                <div class="tech-stack" style="margin-top:16px;"><span>PySpark</span> <span>Python</span> <span>Power BI</span> <span>DAX</span> <span>Pandas</span> <span>Kaggle Dataset</span> <span>Star Schema</span> <span>ETL Pipeline</span></div>
             </div>
-            <!-- ===== END ULTRA-MARATHON ===== -->
 
-            <!-- ===== PRISMA – AI MARKETING AGENCY ===== -->
+            <!-- PRISMA – AI MARKETING AGENCY -->
             <div class="content-card project-card flex-featured-card">
                 <div class="project-links">
                     <i class="fas fa-folder folder-icon"></i>
@@ -486,242 +180,96 @@
                     </div>
                 </div>
                 <h3>PRISMA &ndash; AI Marketing Agency <span style="font-size:0.72rem;background:#1e3a5f;color:#38bdf8;padding:3px 8px;border-radius:4px;margin-left:8px;font-weight:500;">Market Research &amp; Business Model</span></h3>
-                <p style="color:#8892b0;font-size:0.95rem;margin-top:12px;line-height:1.6;">
-                    A data-validated <span style="color:#38bdf8;font-weight:600;">AI-powered marketing agency</span> concept built on primary research from <span style="color:#38bdf8;font-weight:600;">1,000 professionals</span>. The study exposed the &ldquo;Routine Trap&rdquo; &mdash; 85% of professionals spend nearly half their week on routine tasks, suppressing creativity and causing 60% to miss key business opportunities. PRISMA proposes an intelligent SaaS platform that automates brand identity, campaign strategy, and performance analytics using specialized AI agents, acting as a <span style="color:#38bdf8;font-weight:600;">strategic partner</span> rather than just a service provider.
-                </p>
-
-                <!-- Key Stats Row -->
+                <p style="color:#8892b0;font-size:0.95rem;margin-top:12px;line-height:1.6;">A data-validated <span style="color:#38bdf8;font-weight:600;">AI-powered marketing agency</span> concept built on primary research from <span style="color:#38bdf8;font-weight:600;">1,000 professionals</span>. The study exposed the &ldquo;Routine Trap&rdquo; &mdash; 85% of professionals spend nearly half their week on routine tasks, suppressing creativity and causing 60% to miss key business opportunities. PRISMA proposes an intelligent SaaS platform that automates brand identity, campaign strategy, and performance analytics using specialized AI agents.</p>
                 <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;">
-                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
-                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">1K</div>
-                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Respondents</div>
-                    </div>
-                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
-                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">85%</div>
-                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Buried in Routine</div>
-                    </div>
-                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
-                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">91.4%</div>
-                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Game Changer Rating</div>
-                    </div>
-                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;">
-                        <div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">32.4%</div>
-                        <div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Conversion Rate</div>
-                    </div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;"><div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">1K</div><div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Respondents</div></div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;"><div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">85%</div><div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Buried in Routine</div></div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;"><div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">91.4%</div><div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Game Changer Rating</div></div>
+                    <div style="background:#0a192f;border:1px solid #1e3a5f;border-radius:6px;padding:10px 16px;text-align:center;flex:1;min-width:90px;"><div style="color:#38bdf8;font-size:1.3rem;font-weight:700;">32.4%</div><div style="color:#8892b0;font-size:0.75rem;margin-top:2px;">Conversion Rate</div></div>
                 </div>
 
-                <!-- Research Findings -->
-                <div style="margin-top:18px;">
-                    <p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-chart-bar" style="color:#38bdf8;margin-right:6px;"></i>Research Findings</p>
-                    <ul style="color:#8892b0;font-size:0.88rem;padding-left:18px;line-height:1.8;">
-                        <li><span style="color:#38bdf8;">The Routine Trap:</span> High routine workload directly correlates with low creative output &mdash; nearly 50% of teams can&rsquo;t pitch even one new idea per week</li>
-                        <li><span style="color:#38bdf8;">AI Adoption:</span> IT &amp; Software (90%), Marketing &amp; Creative (82%), and Manufacturing (77%) lead industry AI adoption in 2025</li>
-                        <li><span style="color:#38bdf8;">Market Validation:</span> 91.4% of surveyed professionals rated &ldquo;Automated Market Scanning&rdquo; as a Game Changer (5/5)</li>
-                        <li><span style="color:#38bdf8;">Solution Fit:</span> 69% of resource-shortage bottleneck users see high system value &mdash; strongest signal for the target segment</li>
-                    </ul>
-                </div>
-
-                <!-- Agent Architecture -->
-                <div style="margin-top:16px;">
-                    <p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-robot" style="color:#38bdf8;margin-right:6px;"></i>Agent Architecture</p>
-                    <div style="display:flex;align-items:center;flex-wrap:wrap;gap:6px;font-size:0.82rem;font-family:monospace;color:#8892b0;">
-                        <span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">Market Research</span>
-                        <span style="color:#38bdf8;">&#8594;</span>
-                        <span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">Visual Identity Agent</span>
-                        <span style="color:#38bdf8;">&#8594;</span>
-                        <span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">Brand Strategy Agent</span>
-                        <span style="color:#38bdf8;">&#8594;</span>
-                        <span style="background:#0a192f;border:1px solid #38bdf8;padding:4px 10px;border-radius:4px;color:#38bdf8;">Automated Campaigns</span>
-                    </div>
-                </div>
-
-                <!-- Business Model Highlights -->
-                <div style="margin-top:16px;">
-                    <p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-briefcase" style="color:#38bdf8;margin-right:6px;"></i>Business Model Highlights</p>
-                    <ul style="color:#8892b0;font-size:0.88rem;padding-left:18px;line-height:1.8;">
-                        <li><span style="color:#38bdf8;">SaaS Tiers:</span> Starter (freelancers &amp; small stores) &middot; Growth (SMEs &amp; scaling brands) &middot; Enterprise (large businesses &amp; agencies)</li>
-                        <li><span style="color:#38bdf8;">Target Segments:</span> Startups, personal brands, e-commerce stores, and marketing agencies</li>
-                        <li><span style="color:#38bdf8;">Key Partners:</span> OpenAI, HuggingFace, Meta Ads, Google, AWS, Power BI</li>
-                    </ul>
-                </div>
-
-                <!-- Team -->
-                <div style="margin-top:14px;padding:12px;background:#0a192f;border-radius:6px;border:1px solid #1e3a5f;">
-                    <p style="color:#ccd6f6;font-size:0.85rem;font-weight:600;margin-bottom:6px;"><i class="fas fa-users" style="color:#38bdf8;margin-right:6px;"></i>Team</p>
-                    <p style="color:#8892b0;font-size:0.82rem;">PRISMA Analysis Team</p>
-                </div>
-
-                <div class="tech-stack" style="margin-top:16px;">
-                    <span>Power BI</span> <span>Data Analysis</span> <span>Market Research</span> <span>Business Model Canvas</span> <span>AI Agents</span> <span>SaaS</span> <span>OpenAI</span> <span>HuggingFace</span>
-                </div>
-            </div>
-            <!-- ===== END PRISMA ===== -->
-
-            <div class="content-card project-card">
-                <div class="project-links">
-                    <i class="fas fa-folder folder-icon"></i>
-                    <a href="https://github.com/joalsebaey" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
-                </div>
-                <h3>Gamification Service</h3>
-                <p>Developed a scalable backend microservice using Python and MongoDB, designed to handle high-volume user activity. Built a flexible REST API to manage data flow for user engagement metrics.</p>
-                <div class="tech-stack">
-                    <span>Python</span> <span>MongoDB</span> <span>REST API</span> <span>Microservices</span>
-                </div>
-            </div>
-
-            <div class="content-card project-card">
-                <div class="project-links">
-                    <i class="fas fa-folder folder-icon"></i>
-                    <a href="https://github.com/joalsebaey" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
-                </div>
-                <h3>Quiz Service</h3>
-                <p>Architected a three-layer microservice using Python and MongoDB, ensuring a clear separation of data, business, and presentation logic. Designed an optimized database structure for efficient data retrieval.</p>
-                <div class="tech-stack">
-                    <span>Python</span> <span>MongoDB</span> <span>Architecture</span>
-                </div>
-            </div>
-            
-            <div class="content-card project-card">
-                <div class="project-links">
-                    <i class="fas fa-folder folder-icon"></i>
-                    <a href="https://github.com/joalsebaey" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
-                </div>
-                <h3>Fraud Detection Model</h3>
-                <p>Developed a predictive model that accurately identified fraudulent transactions, safeguarding businesses from significant financial losses through real-time anomaly detection.</p>
-                <div class="tech-stack">
-                    <span>Machine Learning</span> <span>Python</span> <span>Pandas</span>
-                </div>
-            </div>
-            
-            <div class="content-card project-card">
-                <div class="project-links">
-                    <i class="fas fa-folder folder-icon"></i>
-                    <a href="https://github.com/joalsebaey" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
-                </div>
-                <h3>Predictive Maintenance</h3>
-                <p>Implemented an advanced predictive analytics system utilizing TensorFlow that successfully predicted equipment failures, drastically reducing downtime and improving overall operational efficiency.</p>
-                <div class="tech-stack">
-                    <span>TensorFlow</span> <span>Predictive Analytics</span>
-                </div>
-            </div>
-            
-            <div class="content-card project-card">
-                <div class="project-links">
-                    <i class="fas fa-folder folder-icon"></i>
-                    <a href="https://github.com/joalsebaey" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
-                </div>
-                <h3>ECG Classification (CNN)</h3>
-                <p>Leveraged advanced Convolutional Neural Networks (CNN) to classify ECG signals, showcasing the successful application of deep learning algorithms in the healthcare and medical diagnostics space.</p>
-                <div class="tech-stack">
-                    <span>Deep Learning</span> <span>CNN</span> <span>Python</span>
-                </div>
-            </div>
-                        <div class="content-card project-card flex-featured-card">
-                <div class="project-links">
-                    <i class="fas fa-folder folder-icon"></i>
-                    <a href="https://github.com/Welloz03/FLEX_AI_Life_Coach_App" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
-                </div>
-                <h3>FLEX AI Life Coach App <span style="font-size:0.75rem;background:#1e3a5f;color:#38bdf8;padding:3px 8px;border-radius:4px;margin-left:8px;font-weight:500;">Graduation Project</span></h3>
-                <p>A full-stack AI-powered life coaching web application. Combines a React/TypeScript frontend with a FastAPI backend and LangChain + Google Generative AI to deliver personalized coaching, context-aware responses, real-time chat, goal tracking, and adaptive learning.</p>
-                <!-- Dashboard Image Slideshow -->
-                <div class="dashboard-slider" id="flexSlider">
-                    <div class="slider-track" id="flexTrack">
-                        <img src="images/flex-dashboard-1.png" alt="FLEX Dashboard - Progress Tracking" class="slide-img" />
-                        <img src="images/flex-dashboard-2.png" alt="FLEX Dashboard - Main Analytics" class="slide-img" />
+                <!-- PRISMA Dashboard Slider -->
+                <div class="dashboard-slider" id="prismaSlider">
+                    <div class="slider-track" id="prismaTrack">
+                        <img src="images/prisma-dashboard-1.jpg" alt="PRISMA Dashboard &ndash; Market Pain &amp; Workflow Inefficiency" class="slide-img" />
+                        <img src="images/prisma-dashboard-2.jpg" alt="PRISMA Dashboard &ndash; Solution Value &amp; Adoption Readiness" class="slide-img" />
                     </div>
                     <div class="slider-controls">
-                        <button class="slider-btn" onclick="flexSlide(-1)">&#8592;</button>
-                        <span class="slide-counter" id="flexCounter">1 / 2</span>
-                        <button class="slider-btn" onclick="flexSlide(1)">&#8594;</button>
+                        <button class="slider-btn" onclick="prismaSlide(-1)">&#8592;</button>
+                        <span class="slide-counter" id="prismaCounter">1 / 2</span>
+                        <button class="slider-btn" onclick="prismaSlide(1)">&#8594;</button>
                     </div>
                 </div>
-                <div class="tech-stack">
-                    <span>React</span> <span>TypeScript</span> <span>FastAPI</span> <span>LangChain</span> <span>Google AI</span> <span>Python</span> <span>FAISS</span> <span>Power BI</span>
-                </div>
+
+                <div style="margin-top:18px;"><p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-chart-bar" style="color:#38bdf8;margin-right:6px;"></i>Research Findings</p><ul style="color:#8892b0;font-size:0.88rem;padding-left:18px;line-height:1.8;"><li><span style="color:#38bdf8;">The Routine Trap:</span> High routine workload directly correlates with low creative output &mdash; nearly 50% of teams can&rsquo;t pitch even one new idea per week</li><li><span style="color:#38bdf8;">AI Adoption:</span> IT &amp; Software (90%), Marketing &amp; Creative (82%), and Manufacturing (77%) lead industry AI adoption in 2025</li><li><span style="color:#38bdf8;">Market Validation:</span> 91.4% of surveyed professionals rated &ldquo;Automated Market Scanning&rdquo; as a Game Changer (5/5)</li><li><span style="color:#38bdf8;">Solution Fit:</span> 69% of resource-shortage bottleneck users see high system value &mdash; strongest signal for the target segment</li></ul></div>
+                <div style="margin-top:16px;"><p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-robot" style="color:#38bdf8;margin-right:6px;"></i>Agent Architecture</p><div style="display:flex;align-items:center;flex-wrap:wrap;gap:6px;font-size:0.82rem;font-family:monospace;color:#8892b0;"><span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">Market Research</span><span style="color:#38bdf8;">&rarr;</span><span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">Visual Identity Agent</span><span style="color:#38bdf8;">&rarr;</span><span style="background:#0a192f;border:1px solid #1e3a5f;padding:4px 10px;border-radius:4px;">Brand Strategy Agent</span><span style="color:#38bdf8;">&rarr;</span><span style="background:#0a192f;border:1px solid #38bdf8;padding:4px 10px;border-radius:4px;color:#38bdf8;">Automated Campaigns</span></div></div>
+                <div style="margin-top:16px;"><p style="color:#ccd6f6;font-size:0.9rem;font-weight:600;margin-bottom:8px;"><i class="fas fa-briefcase" style="color:#38bdf8;margin-right:6px;"></i>Business Model Highlights</p><ul style="color:#8892b0;font-size:0.88rem;padding-left:18px;line-height:1.8;"><li><span style="color:#38bdf8;">SaaS Tiers:</span> Starter (freelancers &amp; small stores) &middot; Growth (SMEs &amp; scaling brands) &middot; Enterprise (large businesses &amp; agencies)</li><li><span style="color:#38bdf8;">Target Segments:</span> Startups, personal brands, e-commerce stores, and marketing agencies</li><li><span style="color:#38bdf8;">Key Partners:</span> OpenAI, HuggingFace, Meta Ads, Google, AWS, Power BI</li></ul></div>
+                <div style="margin-top:14px;padding:12px;background:#0a192f;border-radius:6px;border:1px solid #1e3a5f;"><p style="color:#ccd6f6;font-size:0.85rem;font-weight:600;margin-bottom:6px;"><i class="fas fa-users" style="color:#38bdf8;margin-right:6px;"></i>Team</p><p style="color:#8892b0;font-size:0.82rem;">PRISMA Analysis Team</p></div>
+                <div class="tech-stack" style="margin-top:16px;"><span>Power BI</span> <span>Data Analysis</span> <span>Market Research</span> <span>Business Model Canvas</span> <span>AI Agents</span> <span>SaaS</span> <span>OpenAI</span> <span>HuggingFace</span></div>
+            </div>
+
+            <div class="content-card project-card">
+                <div class="project-links"><i class="fas fa-folder folder-icon"></i><a href="https://github.com/joalsebaey" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a></div>
+                <h3>Gamification Service</h3>
+                <p>Developed a scalable backend microservice using Python and MongoDB, designed to handle high-volume user activity. Built a flexible REST API to manage data flow for user engagement metrics.</p>
+                <div class="tech-stack"><span>Python</span> <span>MongoDB</span> <span>REST API</span> <span>Microservices</span></div>
+            </div>
+            <div class="content-card project-card">
+                <div class="project-links"><i class="fas fa-folder folder-icon"></i><a href="https://github.com/joalsebaey" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a></div>
+                <h3>Quiz Service</h3>
+                <p>Architected a three-layer microservice using Python and MongoDB, ensuring a clear separation of data, business, and presentation logic. Designed an optimized database structure for efficient data retrieval.</p>
+                <div class="tech-stack"><span>Python</span> <span>MongoDB</span> <span>Architecture</span></div>
+            </div>
+            <div class="content-card project-card">
+                <div class="project-links"><i class="fas fa-folder folder-icon"></i><a href="https://github.com/joalsebaey" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a></div>
+                <h3>Fraud Detection Model</h3>
+                <p>Developed a predictive model that accurately identified fraudulent transactions, safeguarding businesses from significant financial losses through real-time anomaly detection.</p>
+                <div class="tech-stack"><span>Machine Learning</span> <span>Python</span> <span>Pandas</span></div>
+            </div>
+            <div class="content-card project-card">
+                <div class="project-links"><i class="fas fa-folder folder-icon"></i><a href="https://github.com/joalsebaey" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a></div>
+                <h3>Predictive Maintenance</h3>
+                <p>Implemented an advanced predictive analytics system utilizing TensorFlow that successfully predicted equipment failures, drastically reducing downtime and improving overall operational efficiency.</p>
+                <div class="tech-stack"><span>TensorFlow</span> <span>Predictive Analytics</span></div>
+            </div>
+            <div class="content-card project-card">
+                <div class="project-links"><i class="fas fa-folder folder-icon"></i><a href="https://github.com/joalsebaey" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a></div>
+                <h3>ECG Classification (CNN)</h3>
+                <p>Leveraged advanced Convolutional Neural Networks (CNN) to classify ECG signals, showcasing the successful application of deep learning algorithms in the healthcare and medical diagnostics space.</p>
+                <div class="tech-stack"><span>Deep Learning</span> <span>CNN</span> <span>Python</span></div>
+            </div>
+            <div class="content-card project-card flex-featured-card">
+                <div class="project-links"><i class="fas fa-folder folder-icon"></i><a href="https://github.com/Welloz03/FLEX_AI_Life_Coach_App" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a></div>
+                <h3>FLEX AI Life Coach App <span style="font-size:0.75rem;background:#1e3a5f;color:#38bdf8;padding:3px 8px;border-radius:4px;margin-left:8px;font-weight:500;">Graduation Project</span></h3>
+                <p>A full-stack AI-powered life coaching web application. Combines a React/TypeScript frontend with a FastAPI backend and LangChain + Google Generative AI to deliver personalized coaching, context-aware responses, real-time chat, goal tracking, and adaptive learning.</p>
+                <div class="dashboard-slider" id="flexSlider"><div class="slider-track" id="flexTrack"><img src="images/flex-dashboard-1.png" alt="FLEX Dashboard - Progress Tracking" class="slide-img" /><img src="images/flex-dashboard-2.png" alt="FLEX Dashboard - Main Analytics" class="slide-img" /></div><div class="slider-controls"><button class="slider-btn" onclick="flexSlide(-1)">&#8592;</button><span class="slide-counter" id="flexCounter">1 / 2</span><button class="slider-btn" onclick="flexSlide(1)">&#8594;</button></div></div>
+                <div class="tech-stack"><span>React</span> <span>TypeScript</span> <span>FastAPI</span> <span>LangChain</span> <span>Google AI</span> <span>Python</span> <span>FAISS</span> <span>Power BI</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications Section -->
     <section id="certifications" class="section-container bg-slate-900/50">
         <h2 class="section-title">Certifications & Badges</h2>
-        
         <div class="grid md:grid-cols-2 gap-6 mt-12">
-            <div class="content-card cert-card">
-                <i class="fas fa-certificate cert-icon"></i>
-                <div class="cert-info">
-                    <h3>Microsoft Data Engineer</h3>
-                    <p>Digital Egypt Pioneers Initiative (DEPI)</p>
-                    <span>Issued: Oct 2024</span>
-                </div>
-            </div>
-
-            <div class="content-card cert-card">
-                <i class="fas fa-database cert-icon"></i>
-                <div class="cert-info">
-                    <h3>Associate Data Engineer</h3>
-                    <p>DataCamp (#DEA0018375163331)</p>
-                    <span>Issued: Sep 2024</span>
-                </div>
-            </div>
-
-            <div class="content-card cert-card">
-                <i class="fas fa-robot cert-icon"></i>
-                <div class="cert-info">
-                    <h3>Intro to Generative AI with AWS</h3>
-                    <p>Udacity (#1a0a203a-43a1...)</p>
-                    <span>Issued: Jul 2025</span>
-                </div>
-            </div>
-
-            <div class="content-card cert-card">
-                <i class="fas fa-brain cert-icon"></i>
-                <div class="cert-info">
-                    <h3>Understanding Artificial Intelligence</h3>
-                    <p>DataCamp (#UAI9246244230)</p>
-                    <span>Issued: Oct 2025</span>
-                </div>
-            </div>
-
-            <div class="content-card cert-card">
-                <i class="fas fa-code cert-icon"></i>
-                <div class="cert-info">
-                    <h3>Problem Solving (Intermediate)</h3>
-                    <p>HackerRank (#126E7B1F9AC6)</p>
-                    <span>Issued: Mar 2025</span>
-                </div>
-            </div>
-
-            <div class="content-card cert-card">
-                <i class="fas fa-server cert-icon"></i>
-                <div class="cert-info">
-                    <h3>Introduction to SQL</h3>
-                    <p>DataCamp (#33,300,783)</p>
-                    <span>Issued: Mar 2024</span>
-                </div>
-            </div>
+            <div class="content-card cert-card"><i class="fas fa-certificate cert-icon"></i><div class="cert-info"><h3>Microsoft Data Engineer</h3><p>Digital Egypt Pioneers Initiative (DEPI)</p><span>Issued: Oct 2024</span></div></div>
+            <div class="content-card cert-card"><i class="fas fa-database cert-icon"></i><div class="cert-info"><h3>Associate Data Engineer</h3><p>DataCamp (#DEA0018375163331)</p><span>Issued: Sep 2024</span></div></div>
+            <div class="content-card cert-card"><i class="fas fa-robot cert-icon"></i><div class="cert-info"><h3>Intro to Generative AI with AWS</h3><p>Udacity (#1a0a203a-43a1...)</p><span>Issued: Jul 2025</span></div></div>
+            <div class="content-card cert-card"><i class="fas fa-brain cert-icon"></i><div class="cert-info"><h3>Understanding Artificial Intelligence</h3><p>DataCamp (#UAI9246244230)</p><span>Issued: Oct 2025</span></div></div>
+            <div class="content-card cert-card"><i class="fas fa-code cert-icon"></i><div class="cert-info"><h3>Problem Solving (Intermediate)</h3><p>HackerRank (#126E7B1F9AC6)</p><span>Issued: Mar 2025</span></div></div>
+            <div class="content-card cert-card"><i class="fas fa-server cert-icon"></i><div class="cert-info"><h3>Introduction to SQL</h3><p>DataCamp (#33,300,783)</p><span>Issued: Mar 2024</span></div></div>
         </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="py-20 max-w-4xl mx-auto px-4 text-center">
         <h2 class="section-title justify-center mb-6"><span>Let's Build Something Great Together</span></h2>
         <p class="text-slate-400 mb-8 text-lg">I'm eager to contribute my skills to a dynamic team. Let's collaborate on exciting projects and create innovative solutions.</p>
-        
         <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 text-slate-300 mt-12">
-            <a href="mailto:yousefayman150@gmail.com" class="flex items-center justify-center gap-3 hover:text-sky-400 transition text-lg">
-                <i class="fas fa-envelope text-2xl"></i> yousefayman150@gmail.com
-            </a>
-            <a href="https://linkedin.com/in/yousef-alsebaey-741ba9114" target="_blank" class="flex items-center justify-center gap-3 hover:text-sky-400 transition text-lg">
-                <i class="fab fa-linkedin text-2xl"></i> LinkedIn
-            </a>
-            <span class="flex items-center justify-center gap-3 text-lg">
-                <i class="fas fa-phone text-2xl"></i> +20 150 336 1617
-            </span>
+            <a href="mailto:yousefayman150@gmail.com" class="flex items-center justify-center gap-3 hover:text-sky-400 transition text-lg"><i class="fas fa-envelope text-2xl"></i> yousefayman150@gmail.com</a>
+            <a href="https://linkedin.com/in/yousef-alsebaey-741ba9114" target="_blank" class="flex items-center justify-center gap-3 hover:text-sky-400 transition text-lg"><i class="fab fa-linkedin text-2xl"></i> LinkedIn</a>
+            <span class="flex items-center justify-center gap-3 text-lg"><i class="fas fa-phone text-2xl"></i> +20 150 336 1617</span>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="border-t border-slate-800 py-8 text-center text-slate-500 text-sm">
         <p>&copy; 2026 Yousef Alsebaey. Built with Passion & Data.</p>
     </footer>
@@ -736,7 +284,6 @@
             track.style.transform = 'translateX(-' + (flexIndex * 100) + '%)';
             document.getElementById('flexCounter').textContent = (flexIndex + 1) + ' / ' + total;
         }
-
         let umIndex = 0;
         function umSlide(dir) {
             const track = document.getElementById('umTrack');
@@ -745,6 +292,15 @@
             umIndex = (umIndex + dir + total) % total;
             track.style.transform = 'translateX(-' + (umIndex * 100) + '%)';
             document.getElementById('umCounter').textContent = (umIndex + 1) + ' / ' + total;
+        }
+        let prismaIndex = 0;
+        function prismaSlide(dir) {
+            const track = document.getElementById('prismaTrack');
+            const imgs = track.querySelectorAll('.slide-img');
+            const total = imgs.length;
+            prismaIndex = (prismaIndex + dir + total) % total;
+            track.style.transform = 'translateX(-' + (prismaIndex * 100) + '%)';
+            document.getElementById('prismaCounter').textContent = (prismaIndex + 1) + ' / ' + total;
         }
     </script>
 </body>
